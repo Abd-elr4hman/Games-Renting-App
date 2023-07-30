@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Footers from "../headComponents/Footer";
 import image from "../../assets/wallpaperflare.com_wallpaper.jpg";
+import Navbar from "../headComponents/Navbar";
 
 function About() {
   return (

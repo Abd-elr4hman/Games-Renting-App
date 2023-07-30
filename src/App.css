@@ -1,0 +1,79 @@
+body {
+  background-color: #fff7ed !important;
+}
+
+.nav {
+  background: #fff7ed !important;
+}
+
+.main {
+  width: 100%;
+  /* min-width: 3000; */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.main-title {
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.main-text {
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.main-button {
+  background-color: antiquewhite !important;
+  color: #161616 !important;
+  border-color: antiquewhite !important;
+  margin-bottom: 20px;
+}
+
+.home-button {
+  background-color: #ff8c38 !important;
+  /* background-color: #161616 !important; */
+  /* border-color: #161616 !important; */
+}
+
+.footer {
+  position: fixed;
+  background-color: black;
+  color: antiquewhite;
+  height: 20px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-size: small;
+}
+
+.about-main {
+  padding: 20px;
+}
+
+.about-title {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+.about-img {
+  width: 100%;
+}
+
+.about-text {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.about-card {
+  background-color: #ffcc8d !important;
+  margin: 20px;
+}
+
+.about-button {
+  background-color: #161616 !important;
+  border-color: #161616 !important;
+}

@@ -26,12 +26,11 @@ function About() {
             <p className="card-title">
               Browse our large collection of games now!
             </p>
-            <Link to="/about" class="btn btn-primary about-button">
+            <Link to="/games" className="btn btn-primary about-button">
               Find Games
             </Link>
           </div>
         </div>
-        <Footers />
       </main>
     </div>
   );

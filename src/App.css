@@ -77,3 +77,45 @@ body {
   background-color: #161616 !important;
   border-color: #161616 !important;
 }
+
+.gamesList {
+  margin-bottom: 10px;
+}
+
+.gamesList-title {
+  padding: 20px;
+}
+
+.game-list-col {
+  padding: 0px !important;
+}
+
+.card-item {
+  width: 10rem;
+  margin: 10px;
+  padding: 0px;
+  border-color: #fff7ed !important;
+}
+
+.card-item-body {
+  width: 10rem;
+  padding: 0px !important;
+  background-color: #fff7ed !important;
+}
+
+.card-type {
+  height: 34px;
+  padding: 6px 26px;
+  font-style: normal;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  background-color: #e17654;
+  color: #fff7ed;
+  transition: 200ms all cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+
+.card-item:hover {
+  color: #115e59;
+}

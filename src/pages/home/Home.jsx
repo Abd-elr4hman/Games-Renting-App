@@ -8,7 +8,6 @@ function Home() {
     <div>
       {/* <Navbar /> */}
       <Main />
-      <Footer />
     </div>
   );
 }

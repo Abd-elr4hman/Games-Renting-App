@@ -2,27 +2,31 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <nav class="navbar navbar-expand-lg nav">
-      <div class="container-fluid ">
-        <Link class="navbar-brand" to="/">
+    <nav className="navbar navbar-expand-lg nav">
+      <div className="container-fluid">
+        <Link className="navbar-brand" to="/">
           GameShare
-        </Link>
-        {/* <button
-          class="navbar-toggler"
+        </Link>{" "}
+        <button
+          className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
-        </button> */}
-        {/* class="collapse navbar-collapse" */}
-        <div id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <Link class="nav-link active" to="/about">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li className="nav-item">
+              <Link className="nav-link active" to="/games">
+                Games
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link active" to="/about">
                 About
               </Link>
             </li>

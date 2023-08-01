@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const checkColor = (description) => {
   switch (description) {
     case "Classic":
@@ -19,7 +21,7 @@ function Card(props) {
         {props.price} EGP/week
       </h6>
       <button
-        class="card-type"
+        className="card-type"
         style={{ background: `${checkColor(props.type)}` }}
       >
         {props.type}

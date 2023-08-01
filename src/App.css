@@ -114,8 +114,39 @@ body {
   color: #fff7ed;
   transition: 200ms all cubic-bezier(0.4, 0, 0.2, 1);
   pointer-events: none;
+  margin-bottom: 20px !important;
 }
 
 .card-item:hover {
   color: #115e59;
+}
+
+.detail-container {
+  padding: 20px;
+}
+
+.detail-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  width: 100% !important;
+}
+
+.detail-container-desktop {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 400px auto;
+  justify-items: left;
+}
+
+.detail-img-desktop {
+  width: 400px;
+  margin-top: 10px;
+}
+
+.detail-info {
+  padding: 10px;
+  margin-top: 20px;
 }

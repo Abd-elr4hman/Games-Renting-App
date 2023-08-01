@@ -6,6 +6,7 @@ import Home from "./pages/home/Home.jsx";
 import Navbar from "./pages/headComponents/Navbar";
 import Games from "./pages/games/Games";
 import Footer from "./pages/headComponents/Footer";
+import GameDetailPage from "./pages/gameDetail/gameDetail";
 import "../server";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/games" element={<Games />} />
         <Route path="/about" element={<About />} />
+        <Route path="/games/:id" element={<GameDetailPage />} />
       </Routes>
       <Footer />
     </BrowserRouter>

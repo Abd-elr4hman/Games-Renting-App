@@ -3,6 +3,7 @@ import crisis from "../../../assets/crisis.jpg";
 import elden from "../../../assets/elden-ring.jpg";
 import tomb from "../../../assets/tomb-raider.jpg";
 import React from "react";
+import { Link } from "react-router-dom";
 
 function GamesList() {
   const [data, setData] = React.useState([]);
@@ -17,14 +18,16 @@ function GamesList() {
 
   const dataElements = data.map((game) => (
     <div key={game.id} className="col">
-      <div className="card card-item">
-        <Card
-          title={game.name}
-          imgPath={game.imageUrl}
-          price={game.price}
-          type={game.type}
-        />
-      </div>
+      <Link to={`/games/${game.id}`} style={{ textDecoration: "none" }}>
+        <div className="card card-item">
+          <Card
+            title={game.name}
+            imgPath={game.imageUrl}
+            price={game.price}
+            type={game.type}
+          />
+        </div>
+      </Link>
     </div>
   ));
 

@@ -1,37 +1,80 @@
-import { Link } from "react-router-dom";
+import { Navigate, NavLink, useNavigate } from "react-router-dom";
+import loginIcon from "../../../src/assets/loginIcon.png";
+import logout from "../../../src/assets/logout.png";
+import { UserAuth } from "../../context/AuthContext";
+
+// function fakeLogOut() {
+//   localStorage.removeItem("loggedin");
+// }
 
 function Navbar() {
+  // const isLoggedIn = localStorage.getItem("loggedin");
+  const navigate = useNavigate();
+  const { logOut, user } = UserAuth();
+
+  const handleLogout = async () => {
+    try {
+      await logOut();
+      navigate("/login");
+      console.log("you are logged out");
+    } catch (err) {
+      console.log(err.message);
+    }
+  };
+
   return (
-    <nav className="navbar navbar-expand-lg nav">
-      <div className="container-fluid">
-        <Link className="navbar-brand" to="/">
+    <nav className="">
+      <div className="nav">
+        <NavLink className="nav-brand" to="/">
           GameShare
-        </Link>{" "}
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <Link className="nav-link active" to="/games">
-                Games
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link active" to="/about">
-                About
-              </Link>
-            </li>
-          </ul>
-        </div>
+        </NavLink>
+
+        <ul className="nav">
+          <li className="">
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "host-nsv-ul--link--focus" : "nav-ul--link"
+              }
+              to="/games"
+            >
+              Games
+            </NavLink>
+          </li>
+          <li className="">
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "host-nsv-ul--link--focus" : "nav-ul--link"
+              }
+              to="/host"
+            >
+              Account
+            </NavLink>
+          </li>
+          <li className="">
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "host-nsv-ul--link--focus" : "nav-ul--link"
+              }
+              to="/about"
+            >
+              About
+            </NavLink>
+          </li>
+          <li>
+            {user ? (
+              <div>
+                <button onClick={handleLogout} className="logout--button">
+                  <img src={logout} className="login-icon" />
+                </button>
+                {/* <button onClick={fakeLogOut}></button> */}
+              </div>
+            ) : (
+              <NavLink to="/login">
+                <img src={loginIcon} className="login-icon" />
+              </NavLink>
+            )}
+          </li>
+        </ul>
       </div>
     </nav>
   );

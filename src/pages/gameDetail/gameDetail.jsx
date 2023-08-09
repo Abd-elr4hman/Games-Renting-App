@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import {
   BrowserView,
@@ -6,6 +6,8 @@ import {
   isBrowser,
   isMobile,
 } from "react-device-detect";
+
+import { getGame } from "../../../api";
 
 const checkColor = (description) => {
   switch (description) {
@@ -21,18 +23,30 @@ const checkColor = (description) => {
 
 function GameDetailPage() {
   const params = useParams();
-  console.log(params);
+  // console.log(params);
+
+  const location = useLocation();
+  // console.log(location);
 
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    fetch(`/api/games/${params.id}`)
-      .then((res) => res.json())
-      //   .then((res) => console.log(res));
-      .then((data) => setData(data.games));
+    // fetch(`/api/games/${params.id}`)
+    //   .then((res) => res.json())
+    //   //   .then((res) => console.log(res));
+    //   .then((data) => setData(data.games));
+
+    try {
+      // setError(false);
+      getGame(params.id)
+        // .then((res) => res.json())
+        .then((data) => setData(data));
+    } catch (err) {
+      // console.log(err);
+    }
   }, [params.id]);
 
-  console.log(data);
+  // console.log(data);
 
   return (
     <div>
@@ -40,8 +54,11 @@ function GameDetailPage() {
         <div>
           {data ? (
             <div className="detail-container">
-              <Link to="/games" style={{ color: "#201F1D" }}>
-                &larr; Back to all games
+              <Link
+                to={location ? `/games?${location.state.search}` : "/games"}
+                style={{ color: "#201F1D" }}
+              >
+                &larr; Back to {location.state.type} games
               </Link>
               <img
                 src={data.imageUrl}
@@ -77,8 +94,11 @@ function GameDetailPage() {
           {data ? (
             <div className="detail-container-desktop">
               <div>
-                <Link to="/games" style={{ color: "#201F1D" }}>
-                  &larr; Back to all games
+                <Link
+                  to={location ? `/games?${location.state.search}` : "/games"}
+                  style={{ color: "#201F1D" }}
+                >
+                  &larr; Back to {location.state.type} games
                 </Link>
                 <img
                   src={data.imageUrl}

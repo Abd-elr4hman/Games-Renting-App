@@ -4,6 +4,46 @@ body {
 
 .nav {
   background: #fff7ed !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 10px;
+}
+
+.nav-brand {
+  font-size: large;
+  font-weight: bold;
+  color: #161616;
+  text-decoration: none;
+  padding-left: 10px;
+}
+
+.nav-ul {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  list-style-type: none;
+  margin: 0;
+  /* padding: 10px; */
+}
+
+.nav-ul--link {
+  transition: all 0.3s ease 0s;
+  color: #161616;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.nav-ul--link:hover {
+  color: #e17654;
+}
+
+.nav-ul--link:focus {
+  color: #e17654;
+  color: #161616;
+  text-decoration: underline;
 }
 
 .main {
@@ -82,6 +122,73 @@ body {
   margin-bottom: 10px;
 }
 
+.games-list--filter {
+  margin-bottom: 10px;
+}
+
+.games-list--filter--item--sports {
+  margin-left: 10px;
+  margin-right: 10px;
+  text-decoration: none;
+  color: #161616 !important;
+  background: #ffead0 !important;
+  border-color: #ffead0 !important;
+}
+.games-list--filter--item--action {
+  margin-left: 10px;
+  margin-right: 10px;
+  text-decoration: none;
+  color: #161616 !important;
+  background: #ffead0 !important;
+  border-color: #ffead0 !important;
+}
+.games-list--filter--item--classic {
+  margin-left: 10px;
+  margin-right: 10px;
+  text-decoration: none;
+  color: #161616 !important;
+  background: #ffead0 !important;
+  border-color: #ffead0 !important;
+}
+
+.games-list--filter--item--classic--selected {
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #161616;
+  text-decoration: underline;
+  background-color: black !important;
+  border-color: black !important;
+  color: #fff7ed !important;
+}
+.games-list--filter--item--action--selected {
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #161616;
+  text-decoration: underline;
+  background-color: #e17654 !important;
+  border-color: #e17654 !important;
+  color: #fff7ed !important;
+}
+.games-list--filter--item--sports--selected {
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #161616;
+  text-decoration: underline;
+  background-color: #115e59 !important;
+  border-color: #115e59 !important;
+  color: #fff7ed !important;
+}
+
+.game-list--filter-clear {
+  /* font-family: Inter; */
+  color: #161616 !important;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
 .gamesList-title {
   padding: 20px;
 }
@@ -149,4 +256,121 @@ body {
 .detail-info {
   padding: 10px;
   margin-top: 20px;
+}
+
+.host-nav-ul {
+  display: flex;
+  /* justify-content: left; */
+  /* align-items: left; */
+  list-style-type: none;
+  margin: 0;
+  padding: 20px 10%;
+  padding-left: 10px;
+  padding-top: 0px !important;
+}
+
+.host-nsv-ul--link {
+  transition: all 0.3s ease 0s;
+  color: #161616;
+  text-decoration: none;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.host-nsv-ul--link:hover {
+  color: #e17654;
+}
+
+.host-nsv-ul--link--focus {
+  color: #161616;
+  text-decoration: underline;
+  /* font-weight: bold; */
+  /* padding-right: 30px;
+  padding-left: 20px; */
+  /* font-size: large; */
+}
+
+.host-games--container {
+  margin: 10px;
+  display: flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+}
+
+.host-games--card-container {
+  width: 300px;
+  /* height: 10%; */
+  background: white;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  /* margin: 20px; */
+  margin-bottom: 10px;
+  margin-left: 10px;
+  padding: 10px;
+}
+
+.host-games--img {
+  /* width: 100%; */
+  width: 100%;
+  margin-top: 15px;
+  /* height: 90%; */
+}
+
+.host-games--body {
+  padding: 10px;
+}
+
+.host-games--details-container {
+  width: 100%;
+  background: white;
+  display: grid;
+  grid-template-columns: 30% auto;
+  grid-template-rows: 50% 5;
+  /* margin: 20px; */
+  padding: 10px;
+}
+
+.notfound {
+  margin: 20px;
+}
+
+.notfound-btn {
+  margin-top: 10px;
+  background: #161616 !important;
+  border-color: #161616 !important;
+}
+
+.login--container {
+  margin: 30px;
+}
+
+.login--form--button--container {
+  display: flex;
+  justify-content: center;
+}
+
+.login--form--button {
+  background: #e17654 !important;
+  border-color: #e17654 !important;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.login--form--header--container {
+  display: flex;
+  justify-content: center;
+}
+
+.login-icon {
+  width: 20px;
+  margin-left: 5px;
+}
+
+.logout--button {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
 }

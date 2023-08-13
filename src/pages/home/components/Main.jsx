@@ -8,7 +8,7 @@ function Main() {
       </div>
       <div className="d-flex justify-content-center">
         <p className="main-text">
-          Browse a huge collections of games for rental, and have the game
+          Browse a huge collections of games for rent, and have the game
           delivered to you door step in no time!
         </p>
       </div>

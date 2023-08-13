@@ -467,7 +467,7 @@ body {
   background: white;
   margin-top: 10px;
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 80px 2fr 1fr;
 }
 
 .host--dashboard--listed-games--card--img {

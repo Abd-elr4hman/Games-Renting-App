@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <footer className="d-flex justify-content-center footer">
-      <p>Authored by abhassanein</p>
+      <p>Ⓒ 2023 GameShare</p>
       {/* <p>
         <a href="habhassanein.dev">abhassanein</a>
       </p> */}

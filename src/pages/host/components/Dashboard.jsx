@@ -40,7 +40,7 @@ function Dashboard() {
     <div className="host-dashbored">
       <div className="host-dashbored--income">
         <div>
-          <h1>welcome!</h1>
+          <h1>welcome</h1>
           <p>All time income</p>
           <h1>{amountSum} EGP</h1>
         </div>

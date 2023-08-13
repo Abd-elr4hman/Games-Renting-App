@@ -15,7 +15,7 @@ function About() {
         <p className="about-text">
           Our mission is to provde an easy way for gamers to share games! we
           provide a blazing fast delivery service, and distribution centers to
-          exchagne games with anyone anywhere!
+          exchange games with anyone anywhere!
         </p>
         <p className="about-text">
           Our team is full of Gaming aficionados who wish to make game sharing

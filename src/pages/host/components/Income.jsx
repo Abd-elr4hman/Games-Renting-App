@@ -1,4 +1,4 @@
-import TransactionCard from "./transactionCard";
+import TransactionCard from "./TransactionCard";
 import { getHostTransactions } from "../../../../api";
 import { useEffect, useState } from "react";
 import { UserAuth } from "../../../context/AuthContext";

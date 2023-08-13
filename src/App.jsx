@@ -24,6 +24,7 @@ import Login from "./pages/login/Login";
 import AuthRequired from "./pages/headComponents/AuthRequired";
 import SignUp from "./pages/signup/SignUp";
 import { AuthContextProvider } from "./context/AuthContext";
+import AddGame from "./pages/host/components/AddGame";
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
                   <Route path="income" element={<Income />} />
                   <Route path="reviews" element={<Reviews />} />
                   <Route path="games" element={<HostGames />} />
+                  <Route path="addgame" element={<AddGame />} />
                   <Route path="games/:id" element={<HostGameLayout />}>
                     <Route index element={<HostGameDetailInfo />} />
                     <Route path="pricing" element={<HostGameDetailPricing />} />

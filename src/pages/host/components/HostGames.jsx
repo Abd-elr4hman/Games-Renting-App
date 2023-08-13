@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { getHostGames } from "../../../../api";
 import { UserAuth } from "../../../context/AuthContext";
+import { useOutletContext } from "react-router-dom";
 
 const checkColor = (description) => {
   switch (description) {
@@ -16,17 +17,18 @@ const checkColor = (description) => {
 };
 
 function HostGames() {
-  const [games, setGames] = useState([]);
-  const { user } = UserAuth();
+  // const [games, setGames] = useState([]);
+  // const { user } = UserAuth();
 
-  useEffect(() => {
-    // fetch("/api/host/games")
-    //   .then((res) => res.json())
-    //   .then((data) => setGames(data.games));
+  // useEffect(() => {
+  //   // fetch("/api/host/games")
+  //   //   .then((res) => res.json())
+  //   //   .then((data) => setGames(data.games));
 
-    getHostGames(user).then((games) => setGames(games));
-  }, []);
+  //   getHostGames(user).then((games) => setGames(games));
+  // }, []);
 
+  const [reviews, transactions, games] = useOutletContext();
   const hostGames = games.map((game) => (
     <Link
       to={`/host/games/${game.id}`}
@@ -56,6 +58,14 @@ function HostGames() {
     <div style={{ margin: "10px" }}>
       <h1 style={{ marginLeft: "20px" }}>Your listed games</h1>
       <div className="host-games--container">{hostGames}</div>
+      <div className="host-games--add-game-dev">
+        <Link
+          to="../addgame"
+          className="btn btn-primary host-games--add-game-btn"
+        >
+          Add game
+        </Link>
+      </div>
     </div>
   );
 }

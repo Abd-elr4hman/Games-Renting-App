@@ -374,3 +374,116 @@ body {
   overflow: hidden;
   outline: none;
 }
+
+.host-games--add-game-dev {
+  display: flex;
+  justify-content: center;
+}
+
+.host-games--add-game-btn {
+  background: #ff8c38 !important;
+  border-color: #ff8c38 !important;
+  margin-bottom: 20px;
+}
+
+.add-game-form--container {
+  margin: 20px;
+}
+
+.host--income-container {
+  margin: 20px;
+}
+
+.host--income-header {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.host--income-income {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 38px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.host--income--transaction-card {
+  background-color: white;
+  padding: 10px;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 5fr 1fr;
+  margin-top: 10px;
+}
+
+.host--review-container {
+  margin-top: 20px;
+}
+
+.host-dashbored--income {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 20px;
+  background: #ffead0;
+}
+
+.host-dashbored--income--details-container {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.host-dashbored--income--details-text {
+  text-decoration: none;
+  color: #161616;
+}
+
+.host-dashbored--review--container {
+  background: #ffddb2;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.host-dashboard--listed-games-container {
+  padding: 20px;
+}
+
+.host-dashboard--listed-games-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.host-dashboard--listed-games {
+  margin: 10px;
+}
+
+.host--dashboard--listed-games--card {
+  background: white;
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+.host--dashboard--listed-games--card--img {
+  margin: 10px;
+}
+
+.host--dashboard--listed-games--card--info {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  padding-top: 20px;
+}
+
+.host--dashboard--listed-games--card--detail {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding: 20px;
+}

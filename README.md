@@ -10,5 +10,5 @@ npm run dev
 ```
 
 ## TODO
-* [ ]  Use storybook to document and test components.
+* [ ] Use storybook to document and test components.
 

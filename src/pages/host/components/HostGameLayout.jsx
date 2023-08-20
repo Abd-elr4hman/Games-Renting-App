@@ -32,7 +32,7 @@ function HostGameLayout() {
         style={{ margin: "20px", marginBottom: "10px", background: "white" }}
       >
         <Link to="../games" style={{ color: "black", padding: "10px" }}>
-          &larr; Back to host games
+          &larr; Back to games
         </Link>
         {/* <MobileView> */}
         <HostGameDetail

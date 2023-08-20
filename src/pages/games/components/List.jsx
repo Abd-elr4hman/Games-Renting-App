@@ -68,14 +68,14 @@ function GamesList() {
         state={{ search: searchParams.toString(), type: typeFilter }}
         style={{ textDecoration: "none" }}
       >
-        <div className="card card-item">
-          <Card
-            title={game.name}
-            imgPath={game.imageUrl}
-            price={game.price}
-            type={game.type}
-          />
-        </div>
+        {/* <div className="card card-item"> */}
+        <Card
+          title={game.name}
+          imgPath={game.imageUrl}
+          price={parseInt(game.price)}
+          type={game.type}
+        />
+        {/* </div> */}
       </Link>
     </div>
   ));
@@ -105,6 +105,7 @@ function GamesList() {
           Clear filters
         </Link> */}
         <button
+          title="classic-filter"
           onClick={() => setSearchParams({ type: "classic" })}
           className={`btn btn-primary ${
             typeFilter === "classic"
@@ -115,6 +116,7 @@ function GamesList() {
           Classic
         </button>
         <button
+          title="action-filter"
           onClick={() => setSearchParams({ type: "action" })}
           className={`btn btn-primary ${
             typeFilter === "action"
@@ -125,6 +127,7 @@ function GamesList() {
           Action
         </button>
         <button
+          title="sports-filter"
           onClick={() => setSearchParams({ type: "sports" })}
           className={`btn btn-primary ${
             typeFilter === "sports"

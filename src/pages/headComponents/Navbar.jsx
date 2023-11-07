@@ -29,38 +29,41 @@ function Navbar() {
           GameShare
         </NavLink>
 
-        <ul className="nav">
-          <li className="">
+        <div className="nav-ul">
+          <div className="">
             <NavLink
+              style={{ color: "black" }}
               className={({ isActive }) =>
-                isActive ? "host-nsv-ul--link--focus" : "nav-ul--link"
+                isActive ? "nav-ul--link:focus" : "nav-ul--link"
               }
               to="/games"
             >
               Games
             </NavLink>
-          </li>
-          <li className="">
+          </div>
+          <div className="">
             <NavLink
+              style={{ color: "black" }}
               className={({ isActive }) =>
-                isActive ? "host-nsv-ul--link--focus" : "nav-ul--link"
+                isActive ? "nav-ul--link:focus" : "nav-ul--link"
               }
               to="/host"
             >
               Account
             </NavLink>
-          </li>
-          <li className="">
+          </div>
+          <div className="">
             <NavLink
+              style={{ color: "black" }}
               className={({ isActive }) =>
-                isActive ? "host-nsv-ul--link--focus" : "nav-ul--link"
+                isActive ? "nav-ul--link:focus" : "nav-ul--link"
               }
               to="/about"
             >
               About
             </NavLink>
-          </li>
-          <li>
+          </div>
+          <div>
             {user ? (
               <div>
                 <button onClick={handleLogout} className="logout--button">
@@ -73,8 +76,8 @@ function Navbar() {
                 <img src={loginIcon} className="login-icon" />
               </NavLink>
             )}
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
     </nav>
   );

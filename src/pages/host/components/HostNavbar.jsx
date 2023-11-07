@@ -3,8 +3,8 @@ import { NavLink } from "react-router-dom";
 function HostNavbar() {
   return (
     <nav className="">
-      <ul className="host-nav-ul">
-        <li className="">
+      <div className="host-nav-ul">
+        <div className="">
           <NavLink
             className={({ isActive }) =>
               isActive ? "host-nsv-ul--link--focus" : "host-nsv-ul--link"
@@ -14,8 +14,8 @@ function HostNavbar() {
           >
             Dashboard
           </NavLink>
-        </li>
-        <li>
+        </div>
+        <div>
           <NavLink
             className={({ isActive }) =>
               isActive ? "host-nsv-ul--link--focus" : "host-nsv-ul--link"
@@ -24,8 +24,8 @@ function HostNavbar() {
           >
             Income
           </NavLink>
-        </li>
-        <li>
+        </div>
+        <div>
           <NavLink
             className={({ isActive }) =>
               isActive ? "host-nsv-ul--link--focus" : "host-nsv-ul--link"
@@ -34,8 +34,8 @@ function HostNavbar() {
           >
             Reviews
           </NavLink>
-        </li>
-        <li>
+        </div>
+        <div>
           <NavLink
             className={({ isActive }) =>
               isActive ? "host-nsv-ul--link--focus" : "host-nsv-ul--link"
@@ -44,8 +44,8 @@ function HostNavbar() {
           >
             Games
           </NavLink>
-        </li>
-      </ul>
+        </div>
+      </div>
     </nav>
   );
 }

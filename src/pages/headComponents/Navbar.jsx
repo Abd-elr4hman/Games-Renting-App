@@ -3,6 +3,8 @@ import loginIcon from "../../../src/assets/loginIcon.png";
 import logout from "../../../src/assets/logout.png";
 import { UserAuth } from "../../context/AuthContext";
 
+import { LuLogOut, LuLogIn } from "react-icons/lu";
+
 // function fakeLogOut() {
 //   localStorage.removeItem("loggedin");
 // }
@@ -67,13 +69,13 @@ function Navbar() {
             {user ? (
               <div>
                 <button onClick={handleLogout} className="logout--button">
-                  <img src={logout} className="login-icon" />
+                  <LuLogOut size={24} color="black" />
                 </button>
                 {/* <button onClick={fakeLogOut}></button> */}
               </div>
             ) : (
               <NavLink to="/login">
-                <img src={loginIcon} className="login-icon" />
+                <LuLogIn size={20} color="black" />
               </NavLink>
             )}
           </div>

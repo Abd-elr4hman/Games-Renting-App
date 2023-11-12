@@ -69,7 +69,7 @@ function Navbar() {
             {user ? (
               <div>
                 <button onClick={handleLogout} className="logout--button">
-                  <LuLogOut size={24} color="black" />
+                  <LuLogOut size={20} color="black" />
                 </button>
                 {/* <button onClick={fakeLogOut}></button> */}
               </div>
